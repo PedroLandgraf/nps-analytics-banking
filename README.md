@@ -84,14 +84,23 @@ Análise qualitativa dos comentários coletados nas pesquisas.
 
 ---
 
+✍️ Autor
+
+Pedro Landgraf
+
+---
+
 ## 📂 Estrutura do repositório
 
 ```text
 /
 ├── README.md
 ├── data/
-│   └── BD_NPS_distribuicao_rank_gerentes.xlsx
+│   └── BD_NPS.xlsx
 ├── docs/
-│   └── NPS_Analytics_Banco.pbix
+│   └── DASHBOARD_NPS_PORTIFOLIO.pbix
 ├── images/
-│   ├── dashboard_full_
+│   ├── dashboard_nps_full
+│   ├── rank_nps_gerentes.png
+│   ├── csat_categoria.png
+│   └── cloud_clientes.png
