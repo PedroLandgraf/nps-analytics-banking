@@ -98,9 +98,11 @@ Pedro Landgraf
 ├── data/
 │   └── BD_NPS.xlsx
 ├── docs/
-│   └── DASHBOARD_NPS_PORTIFOLIO.pbix
+│   └── README.MD 
 ├── images/
 │   ├── dashboard_nps_full
 │   ├── rank_nps_gerentes.png
 │   ├── csat_categoria.png
 │   └── cloud_clientes.png
+├── powerbi/
+│   └── DASHBOARD_NPS_PORTIFOLIO.pbix
