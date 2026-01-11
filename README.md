@@ -47,7 +47,7 @@ Foi desenvolvido um dashboard interativo que permite:
 
 ## 📷 Visão geral do dashboard
 
-![Visão geral do dashboard](images/Capa Dashboard NPS.png)
+![Visão geral do dashboard](images/dashboard_nps_full.png)
 
 ---
 
@@ -55,7 +55,7 @@ Foi desenvolvido um dashboard interativo que permite:
 
 Análise comparativa do desempenho médio de NPS entre gerentes.
 
-![Ranking de gerentes](images/ranking_gerentes.png)
+![Ranking de gerentes](images/rank_nps_gerentes.png)
 
 ---
 
@@ -63,7 +63,7 @@ Análise comparativa do desempenho médio de NPS entre gerentes.
 
 Avaliação da experiência do cliente em diferentes dimensões do serviço bancário.
 
-![Radar CSAT](images/radar_csat.png)
+![Radar CSAT](images/csat_categoria.png)
 
 ---
 
@@ -71,7 +71,7 @@ Avaliação da experiência do cliente em diferentes dimensões do serviço banc
 
 Análise qualitativa dos comentários coletados nas pesquisas.
 
-![Nuvem de palavras](images/wordcloud_feedbacks.png)
+![Nuvem de palavras](images/cloud_clientes.png)
 
 ---
 
