@@ -18,8 +18,12 @@ As medidas foram desenvolvidas com foco em:
 Total_Respostas =
 COUNTROWS('NPS')
 
+---
+
 Media_NPS =
 AVERAGE('NPS'[Nota_NPS])
+
+---
 
 Rank_Gerente =
 RANKX(
