@@ -1,10 +1,10 @@
-# Medidas DAX – NPS Analytics (Agência Bancária)
+# Medidas DAX – Projeto NPS Analytics (Agência Bancária)
 
-Este documento apresenta as principais **medidas DAX** utilizadas no dashboard
+Este documento reúne as principais medidas DAX utilizadas no dashboard
 de análise de NPS de uma agência bancária fictícia.
 
-O objetivo é documentar a lógica de cálculo e facilitar o entendimento
-das métricas utilizadas no relatório.
+As medidas foram organizadas por finalidade para facilitar leitura
+e manutenção.
 
 ---
 
@@ -15,12 +15,43 @@ das métricas utilizadas no relatório.
 Total_Respostas =
 COUNTROWS('NPS')
 
-NPS =
-DIVIDE(
-    [Qtd_Promotores] - [Qtd_Detratores],
-    [Total_Respostas]
-) * 100
+Media_NPS =
+AVERAGE('NPS'[Nota_NPS])
 
----
+Qtd_Promotores =
+CALCULATE(
+    COUNTROWS('NPS'),
+    'NPS'[Classificacao_NPS] = "Promotor"
+)
+
+Qtd_Neutros =
+CALCULATE(
+    COUNTROWS('NPS'),
+    'NPS'[Classificacao_NPS] = "Neutro"
+)
+
+Qtd_Detratores =
+CALCULATE(
+    COUNTROWS('NPS'),
+    'NPS'[Classificacao_NPS] = "Detrator"
+)
+
+Rank_Gerente =
+RANKX(
+    ALL('NPS'[Gerente]),
+    [Media_NPS],
+    ,
+    DESC,
+    DENSE
+)
+
+Rank_Visual =
+SWITCH(
+    TRUE(),
+    [Rank_Gerente] = 1, "#1 🏆",
+    [Rank_Gerente] = 2, "#2 🏆",
+    [Rank_Gerente] = 3, "#3 🏆",
+    "#" & FORMAT([Rank_Gerente], "0")
+)
 
 
