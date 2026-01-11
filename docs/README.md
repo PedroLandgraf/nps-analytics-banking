@@ -54,4 +54,26 @@ SWITCH(
     "#" & FORMAT([Rank_Gerente], "0")
 )
 
+CSAT_Radar =
+SWITCH(
+    SELECTEDVALUE(Dim_Categoria[Categoria]),
+    "Equipe",          AVERAGE('NPS'[Equipe]),
+    "Confiabilidade", AVERAGE('NPS'[Confiabilidade]),
+    "Experiência",    AVERAGE('NPS'[Experiência]),
+    "Site",           AVERAGE('NPS'[Site]),
+    "Variedade",      AVERAGE('NPS'[Variedade]),
+    "Inovação",       AVERAGE('NPS'[Inovação]),
+    "Resolução",      AVERAGE('NPS'[Resolução])
+)
+
+Cor_Media_NPS =
+SWITCH(
+    TRUE(),
+    [Media_NPS] >= 7, "#42C87A",
+    [Media_NPS] >= 4, "#FFC145",
+    "#FB4141"
+)
+
+
+
 
